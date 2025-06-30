@@ -1,0 +1,32 @@
+package day1;
+
+import java.util.Scanner;
+
+public class Grading {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter marks: ");
+
+        int marks = in.nextInt();
+
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid marks. Please enter a value between 0 and 100.");
+        } else {
+            String grade;
+            if (marks >= 90) grade = "A+";
+            else if (marks >= 80) grade = "A";
+            else if (marks >= 70) grade = "B";
+            else if (marks >= 60) grade = "C";
+            else if (marks >= 50) grade = "D";
+            else grade = "F";
+
+            String result = (marks >= 50) ? "Pass" : "Fail";
+
+            System.out.println("Grade: " + grade);
+            System.out.println("Result: " + result);
+        }
+
+        in.close();
+    }
+}
