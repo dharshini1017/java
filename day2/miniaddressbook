@@ -1,0 +1,49 @@
+package day2;
+
+import java.util.Scanner;
+
+public class miniaddressbook{
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String[] contacts = new String[3]; // only 3 contacts
+
+        int choice, i = 0;
+
+
+
+        do {
+
+            System.out.println("1. Add  2. View  3. Exit");
+
+            choice = sc.nextInt();
+
+            sc.nextLine(); // clear buffer7788ccyu
+
+
+
+            if (choice == 1 && i < contacts.length) {
+
+                System.out.print("Enter name & phone: ");
+
+                contacts[i++] = sc.nextLine();
+
+            } else if (choice == 2) {
+
+                for (int j = 0; j < i; j++)
+
+                    System.out.println((j + 1) + ". " + contacts[j]);
+
+            }
+
+        } while (choice != 3);
+
+
+
+        sc.close();
+
+    }
+
+}
